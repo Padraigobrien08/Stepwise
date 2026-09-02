@@ -328,10 +328,10 @@ Set via `.env` (see [`.env.example`](.env.example)):
 | Variable | Default | Description |
 |---|---|---|
 | `ANTHROPIC_API_KEY` | *(required)* | Claude API key |
-| `STRUCTURING_MODEL` | `claude-haiku-4-5-20251001` | Step extraction (high volume) |
+| `STRUCTURING_MODEL` | `claude-haiku-4-5` | Step extraction (high volume) |
 | `HYDE_MODEL` | `claude-haiku-4-5` | HyDE hypothetical-answer generation |
 | `SYNTHESIS_MODEL` | `claude-haiku-4-5` | Streamed answer synthesis |
-| `CONSOLIDATION_MODEL` | `claude-sonnet-4-6` | Step consolidation (judgment) |
+| `CONSOLIDATION_MODEL` | `claude-sonnet-5` | Step consolidation (judgment) |
 | `FRAME_INTERVAL_SECONDS` | `5` | Frame sampling interval |
 | `EMBEDDING_MODEL` | `all-MiniLM-L6-v2` | Text embedding model |
 | `DRIVE_TOKEN_PATH` | `./data/drive_token.json` | Google Drive OAuth token |
@@ -365,7 +365,7 @@ Every Claude model ID lives in [`stepwise/config.py`](stepwise/config.py) — no
 
 **https://platform.claude.com/docs/en/about-claude/models/overview**
 
-At the time of writing, the current model IDs are `claude-sonnet-5`, `claude-opus-4-8`, and `claude-haiku-4-5-20251001`. Override any stage via its environment variable (see [`.env.example`](.env.example)) — for example, `CONSOLIDATION_MODEL=claude-opus-4-8` to use a more capable model for consolidation.
+At the time of writing, the current model IDs are `claude-opus-5`, `claude-sonnet-5`, and `claude-haiku-4-5` — note that these carry no date suffix. Override any stage via its environment variable (see [`.env.example`](.env.example)) — for example, `CONSOLIDATION_MODEL=claude-opus-5` to use a more capable model for consolidation.
 
 ---
 

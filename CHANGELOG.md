@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Default Claude models updated to current releases. `CONSOLIDATION_MODEL` moves
+  from `claude-sonnet-4-6` to `claude-sonnet-5`, which is both newer and cheaper
+  ($2/$10 per MTok against $3/$15), and `STRUCTURING_MODEL` drops its date
+  suffix to the current `claude-haiku-4-5`. `HYDE_MODEL` and `SYNTHESIS_MODEL`
+  are unchanged. Set the environment variables to pin the previous IDs.
+
 ## [0.1.0] - 2026-07-07
 
 ### Added
