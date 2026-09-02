@@ -12,12 +12,12 @@ class Settings(BaseSettings):
     # over time — check Anthropic's model docs before updating, and prefer the
     # current recommended IDs for new deployments:
     #   https://platform.claude.com/docs/en/about-claude/models/overview
-    # As of this writing the current IDs are claude-sonnet-5, claude-opus-4-8,
-    # and claude-haiku-4-5-20251001. See README "Choosing Claude models".
-    structuring_model: str = "claude-haiku-4-5-20251001"   # step extraction (high volume)
+    # As of this writing the current IDs are claude-opus-5, claude-sonnet-5 and
+    # claude-haiku-4-5. See README "Choosing Claude models".
+    structuring_model: str = "claude-haiku-4-5"             # step extraction (high volume)
     hyde_model: str = "claude-haiku-4-5"                    # HyDE hypothetical-answer generation
     synthesis_model: str = "claude-haiku-4-5"              # streamed answer synthesis
-    consolidation_model: str = "claude-sonnet-4-6"        # step consolidation (judgment)
+    consolidation_model: str = "claude-sonnet-5"        # step consolidation (judgment)
 
     data_dir: Path = Path("./data")
     db_path: Path = Path("./data/stepwise.db")
