@@ -9,6 +9,14 @@ updates:
     labels:
       - "dependencies"
       - "python"
+    ignore:
+      # torch pins its CUDA wheels and triton to exact versions, so bumping
+      # them in constraints.txt makes pip resolution impossible and breaks the
+      # Docker build. These versions belong to torch, not to this repo — they
+      # move when torch moves. See PR #66.
+      - dependency-name: "nvidia-*"
+      - dependency-name: "cuda-*"
+      - dependency-name: "triton"
 
   # Next.js frontend (web/package.json)
   - package-ecosystem: "npm"
