@@ -1,4 +1,4 @@
-FROM python:3.14-slim
+FROM python:3.15-slim
 
 # ffmpeg for frame extraction and yt-dlp muxing
 RUN apt-get update && apt-get install -y --no-install-recommends \
